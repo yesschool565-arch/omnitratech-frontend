@@ -87,6 +87,7 @@ const AdminDashboard: React.FC = () => {
       setFooterLinks(fLinks as FooterLinkModel[]);
     } catch (err) {
       console.error("Failed to load CMS data:", err);
+      alert('Failed to load data. Please refresh the page.');
     }
   };
 
@@ -112,9 +113,10 @@ const AdminDashboard: React.FC = () => {
     setLocalSettings(settings);
   }, [settings]);
 
-  const saveSettings = () => {
+  const saveSettings = async () => {
     try {
-      updateSettings(localSettings);
+      await updateSettings(localSettings);
+      setLocalSettings(localSettings); // Refresh the local state
       alert('Settings saved successfully!');
     } catch (error) {
       console.error('Error saving settings:', error);
@@ -134,7 +136,7 @@ const AdminDashboard: React.FC = () => {
       setShowAddService(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const handleAddNewService = (e: React.FormEvent) => {
+  const handleAddNewService = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const finalService = {
@@ -144,13 +146,15 @@ const AdminDashboard: React.FC = () => {
           features: newService.features.filter(f => f.title.trim() !== '')
       };
       if (editingServiceId) {
-          CMSServices.update(editingServiceId, finalService);
+          await CMSServices.update(editingServiceId, finalService);
           alert('Service updated successfully!');
       } else {
-          CMSServices.add(finalService);
+          await CMSServices.add(finalService);
           alert('Service added successfully!');
       }
-      setServices(CMSServices.getAll());
+      // Reload data from server
+      const updatedServices = await CMSServices.getAll();
+      setServices(updatedServices);
       setShowAddService(false);
       setNewService(initServiceState);
       setEditingServiceId(null);
@@ -166,17 +170,19 @@ const AdminDashboard: React.FC = () => {
       setShowAddResource(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  const handleAddNewResource = (e: React.FormEvent) => {
+  const handleAddNewResource = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       if (editingResourceId) {
-          CMSResources.update(editingResourceId, newResource);
+          await CMSResources.update(editingResourceId, newResource);
           alert('Resource updated successfully!');
       } else {
-          CMSResources.add(newResource);
+          await CMSResources.add(newResource);
           alert('Resource added successfully!');
       }
-      setResources(CMSResources.getAll());
+      // Reload data from server
+      const updatedResources = await CMSResources.getAll();
+      setResources(updatedResources);
       setShowAddResource(false);
       setNewResource(initResourceState);
       setEditingResourceId(null);
@@ -192,18 +198,20 @@ const AdminDashboard: React.FC = () => {
       setShowAddJob(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  const handleAddNewJob = (e: React.FormEvent) => {
+  const handleAddNewJob = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const payload = { ...newJob, tags: newJob.tags.split(',').map(s=>s.trim()).filter(Boolean) };
       if (editingJobId) {
-          CMSJobs.update(editingJobId, payload);
+          await CMSJobs.update(editingJobId, payload);
           alert('Job updated successfully!');
       } else {
-          CMSJobs.add(payload);
+          await CMSJobs.add(payload);
           alert('Job posted successfully!');
       }
-      setJobs(CMSJobs.getAll());
+      // Reload data from server
+      const updatedJobs = await CMSJobs.getAll();
+      setJobs(updatedJobs);
       setShowAddJob(false);
       setNewJob(initJobState);
       setEditingJobId(null);
@@ -222,7 +230,7 @@ const AdminDashboard: React.FC = () => {
     setShowAddIndustry(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const handleAddNewIndustry = (e: React.FormEvent) => {
+  const handleAddNewIndustry = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const finalIndustry = {
@@ -232,13 +240,15 @@ const AdminDashboard: React.FC = () => {
           features: newIndustry.features.filter(f => f.title.trim() !== '')
       };
       if (editingIndustryId) {
-          CMSIndustries.update(editingIndustryId, finalIndustry);
+          await CMSIndustries.update(editingIndustryId, finalIndustry);
           alert('Industry updated successfully!');
       } else {
-          CMSIndustries.add(finalIndustry);
+          await CMSIndustries.add(finalIndustry);
           alert('Industry added successfully!');
       }
-      setIndustries(CMSIndustries.getAll());
+      // Reload data from server
+      const updatedIndustries = await CMSIndustries.getAll();
+      setIndustries(updatedIndustries);
       setShowAddIndustry(false);
       setEditingIndustryId(null);
       setNewIndustry(initIndustryState);
@@ -254,17 +264,19 @@ const AdminDashboard: React.FC = () => {
     setShowAddFooterLink(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const handleAddNewFooterLink = (e: React.FormEvent) => {
+  const handleAddNewFooterLink = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       if (editingFooterLinkId) {
-          CMSFooterLinks.update(editingFooterLinkId, newFooterLink);
+          await CMSFooterLinks.update(editingFooterLinkId, newFooterLink);
           alert('Link updated successfully!');
       } else {
-          CMSFooterLinks.add(newFooterLink);
+          await CMSFooterLinks.add(newFooterLink);
           alert('Link added successfully!');
       }
-      setFooterLinks(CMSFooterLinks.getAll());
+      // Reload data from server
+      const updatedLinks = await CMSFooterLinks.getAll();
+      setFooterLinks(updatedLinks);
       setShowAddFooterLink(false);
       setEditingFooterLinkId(null);
       setNewFooterLink(initFooterLinkState);
