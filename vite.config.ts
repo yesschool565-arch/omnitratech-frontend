@@ -31,7 +31,23 @@ export default defineConfig(({ mode }) => {
       build: {
         outDir: 'dist',
         sourcemap: false,
-        minify: 'terser'
+        minify: 'terser',
+        terserOptions: {
+          compress: {
+            drop_console: true,
+            passes: 2,
+          },
+          format: {
+            comments: false,
+          },
+        },
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'vendor': ['react', 'react-dom', 'react-router-dom'],
+            }
+          }
+        }
       }
     };
 });
