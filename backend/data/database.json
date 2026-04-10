@@ -1,0 +1,693 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "slug": "ai-ml-services",
+      "title": "AI & ML Services",
+      "description": "Top-notch delivery of comprehensive GenAI and Agentic AI solutions tailored for enterprise success.",
+      "iconName": "Brain",
+      "fullDescription": "Our AI & ML Services provide cutting-edge artificial intelligence and machine learning solutions designed for modern enterprises. From generative AI implementations to agentic systems, we deliver comprehensive solutions tailored to your business needs with proven expertise across industries.",
+      "benefits": [
+        "Generative AI Implementation",
+        "Machine Learning Models",
+        "Enterprise AI Integration",
+        "Scalable AI Solutions"
+      ],
+      "features": [
+        {
+          "title": "GenAI Solutions",
+          "desc": "Advanced generative AI for content and decision-making",
+          "iconName": "Zap"
+        },
+        {
+          "title": "Agentic AI",
+          "desc": "Autonomous AI agents for complex workflows",
+          "iconName": "Brain"
+        },
+        {
+          "title": "Custom Models",
+          "desc": "Tailored machine learning models for your use cases",
+          "iconName": "Settings"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "slug": "cloud-cognitive-business-operations",
+      "title": "Cloud Cognitive Business Operations",
+      "description": "Intelligent cloud-based business operations powered by cognitive technologies.",
+      "iconName": "Cloud",
+      "fullDescription": "Transform your business operations with our cloud-based cognitive solutions. We deliver intelligent systems that automate processes, enhance decision-making, and optimize resource allocation using advanced cloud infrastructure and AI technologies.",
+      "benefits": [
+        "Cloud Infrastructure",
+        "Cognitive Automation",
+        "Real-time Analytics",
+        "Cost Optimization"
+      ],
+      "features": [
+        {
+          "title": "Cloud Platform",
+          "desc": "Scalable cloud infrastructure for enterprise operations",
+          "iconName": "Cloud"
+        },
+        {
+          "title": "Cognitive Automation",
+          "desc": "AI-powered process automation and optimization",
+          "iconName": "Zap"
+        },
+        {
+          "title": "Analytics & Insights",
+          "desc": "Real-time business intelligence and reporting",
+          "iconName": "BarChart3"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "slug": "mechanical-industrial-solutions",
+      "title": "Mechanical & Industrial Solutions",
+      "description": "Expert mechanical engineering and industrial systems design for complex environments.",
+      "iconName": "Factory",
+      "fullDescription": "Specialized mechanical engineering and industrial systems design services for complex manufacturing and industrial environments. Our team provides comprehensive solutions from concept through implementation with proven expertise in machinery design, automation, and optimization.",
+      "benefits": [
+        "System Design & Engineering",
+        "Machinery Optimization",
+        "Industrial Automation",
+        "Quality Assurance"
+      ],
+      "features": [
+        {
+          "title": "Design Engineering",
+          "desc": "Advanced CAD and mechanical design solutions",
+          "iconName": "Wrench"
+        },
+        {
+          "title": "Automation",
+          "desc": "Industrial automation and control systems",
+          "iconName": "Zap"
+        },
+        {
+          "title": "Optimization",
+          "desc": "Equipment performance and efficiency optimization",
+          "iconName": "TrendingUp"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "slug": "pipeline-design-installation",
+      "title": "Pipeline Design & Installation",
+      "description": "Professional pipeline engineering, mapping, and installation services worldwide.",
+      "iconName": "GitBranch",
+      "fullDescription": "Comprehensive pipeline engineering and installation services covering design, mapping, installation, and maintenance. We provide end-to-end solutions for oil, gas, water, and utility pipelines with global expertise and local knowledge.",
+      "benefits": [
+        "Global Expertise",
+        "Advanced Mapping",
+        "Quality Installation",
+        "Maintenance Support"
+      ],
+      "features": [
+        {
+          "title": "Engineering Design",
+          "desc": "Professional pipeline design and route optimization",
+          "iconName": "GitBranch"
+        },
+        {
+          "title": "Installation",
+          "desc": "Expert installation and commissioning services",
+          "iconName": "Hammer"
+        },
+        {
+          "title": "Maintenance",
+          "desc": "Ongoing maintenance and inspection services",
+          "iconName": "Wrench"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "slug": "enterprise-solutions",
+      "title": "Enterprise Solutions",
+      "description": "Scalable enterprise-grade solutions tailored to your business needs.",
+      "iconName": "Building2",
+      "fullDescription": "Our enterprise solutions provide scalable, robust systems designed for large organizations. From infrastructure to application development, we deliver comprehensive solutions that support your business growth and operational excellence.",
+      "benefits": [
+        "Scalable Infrastructure",
+        "Enterprise Architecture",
+        "High Availability",
+        "Business Continuity"
+      ],
+      "features": [
+        {
+          "title": "Infrastructure",
+          "desc": "Enterprise-grade infrastructure and architecture",
+          "iconName": "Building2"
+        },
+        {
+          "title": "Applications",
+          "desc": "Custom enterprise applications and integrations",
+          "iconName": "Code"
+        },
+        {
+          "title": "Support",
+          "desc": "24/7 enterprise support and managed services",
+          "iconName": "Headphones"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "slug": "cybersecurity-solutions",
+      "title": "Cybersecurity Solutions",
+      "description": "Comprehensive security solutions to protect your digital assets and infrastructure.",
+      "iconName": "Shield",
+      "fullDescription": "Complete cybersecurity solutions protecting your organization from evolving threats. We provide threat detection, incident response, security consulting, and compliance management to ensure your digital assets and data remain secure.",
+      "benefits": [
+        "Threat Detection",
+        "Incident Response",
+        "Compliance Management",
+        "Security Consulting"
+      ],
+      "features": [
+        {
+          "title": "Threat Detection",
+          "desc": "Advanced threat detection and monitoring systems",
+          "iconName": "AlertTriangle"
+        },
+        {
+          "title": "Incident Response",
+          "desc": "Rapid response to security incidents",
+          "iconName": "Zap"
+        },
+        {
+          "title": "Compliance",
+          "desc": "Security compliance and audit management",
+          "iconName": "CheckCircle"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "resources": [
+    {
+      "id": "1",
+      "title": "Enterprise AI Implementation Guide",
+      "category": "Guide",
+      "format": "PDF",
+      "date": "Jan 15, 2024",
+      "readTime": "12 min",
+      "createdAt": "2024-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Cloud Migration Best Practices",
+      "category": "Whitepaper",
+      "format": "PDF",
+      "date": "Jan 10, 2024",
+      "readTime": "15 min",
+      "createdAt": "2024-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Pipeline Engineering Fundamentals",
+      "category": "Tutorial",
+      "format": "Video",
+      "date": "Jan 5, 2024",
+      "readTime": "20 min",
+      "createdAt": "2024-01-05T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Industrial Automation Case Study",
+      "category": "Case Study",
+      "format": "PDF",
+      "date": "Dec 28, 2023",
+      "readTime": "10 min",
+      "createdAt": "2023-12-28T00:00:00.000Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Senior AI/ML Engineer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "FULL-TIME",
+      "description": "We are seeking an experienced Senior AI/ML Engineer to lead our AI initiatives.",
+      "requirements": "8+ years experience in ML/AI, Python, TensorFlow, strong problem-solving skills",
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Python",
+        "Senior"
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Cloud Solutions Architect",
+      "department": "Architecture",
+      "location": "New York, NY",
+      "type": "FULL-TIME",
+      "description": "Design and implement scalable cloud solutions for enterprise clients.",
+      "requirements": "10+ years cloud experience, AWS/Azure, architecture skills",
+      "tags": [
+        "Cloud",
+        "Architecture",
+        "AWS",
+        "Senior"
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Mechanical Design Engineer",
+      "department": "Engineering",
+      "location": "Houston, TX",
+      "type": "FULL-TIME",
+      "description": "Develop mechanical designs for industrial systems and equipment.",
+      "requirements": "7+ years mechanical design, CATIA/SolidWorks, industrial systems",
+      "tags": [
+        "Mechanical",
+        "CAD",
+        "Design"
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Cybersecurity Analyst",
+      "department": "Security",
+      "location": "Chicago, IL",
+      "type": "FULL-TIME",
+      "description": "Monitor and analyze security threats, implement preventive measures.",
+      "requirements": "5+ years security experience, CISSP preferred, threat analysis",
+      "tags": [
+        "Security",
+        "Cybersecurity",
+        "Analysis"
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "industries": [
+    {
+      "id": "1",
+      "slug": "manufacturing",
+      "title": "Manufacturing",
+      "description": "Digital solutions for modern manufacturing",
+      "iconName": "Factory",
+      "fullDescription": "We deliver cutting-edge solutions tailored for the manufacturing sector, from automation and optimization to digital transformation and Industry 4.0 integration.",
+      "benefits": [
+        "Production Optimization",
+        "Equipment Monitoring",
+        "Quality Control",
+        "Supply Chain Integration"
+      ],
+      "features": [
+        {
+          "title": "Automation",
+          "desc": "Advanced manufacturing automation systems",
+          "iconName": "Zap"
+        },
+        {
+          "title": "IoT Integration",
+          "desc": "Connected sensors and real-time monitoring",
+          "iconName": "Radio"
+        },
+        {
+          "title": "Analytics",
+          "desc": "Production analytics and insights",
+          "iconName": "BarChart3"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "slug": "healthcare",
+      "title": "Healthcare",
+      "description": "Health tech solutions for modern healthcare providers",
+      "iconName": "Heart",
+      "fullDescription": "Our healthcare solutions support patient care, operational efficiency, and digital transformation. From EHR systems to telemedicine platforms, we provide secure and compliant solutions.",
+      "benefits": [
+        "Patient Care Enhancement",
+        "Regulatory Compliance",
+        "Data Security",
+        "Operational Efficiency"
+      ],
+      "features": [
+        {
+          "title": "EHR Systems",
+          "desc": "Electronic health record management systems",
+          "iconName": "FileText"
+        },
+        {
+          "title": "Telemedicine",
+          "desc": "Remote patient consultation platforms",
+          "iconName": "Video"
+        },
+        {
+          "title": "Analytics",
+          "desc": "Healthcare data analytics and reporting",
+          "iconName": "BarChart3"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "slug": "retail-ecommerce",
+      "title": "Retail & E-commerce",
+      "description": "Omnichannel commerce solutions for retailers",
+      "iconName": "ShoppingCart",
+      "fullDescription": "Transform your retail business with our comprehensive e-commerce and omnichannel solutions. From online storefronts to inventory management, we enable seamless customer experiences.",
+      "benefits": [
+        "Sales Growth",
+        "Customer Experience",
+        "Inventory Management",
+        "Omnichannel Integration"
+      ],
+      "features": [
+        {
+          "title": "E-commerce Platform",
+          "desc": "Scalable online shopping platforms",
+          "iconName": "ShoppingCart"
+        },
+        {
+          "title": "Payment Processing",
+          "desc": "Secure payment gateway integration",
+          "iconName": "CreditCard"
+        },
+        {
+          "title": "Inventory",
+          "desc": "Real-time inventory and order management",
+          "iconName": "Package"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "slug": "financial-services",
+      "title": "Financial Services",
+      "description": "Fintech solutions for financial institutions",
+      "iconName": "DollarSign",
+      "fullDescription": "We provide secure, compliant fintech solutions for banks, investment firms, and financial institutions. From trading platforms to risk management, we deliver innovation with security.",
+      "benefits": [
+        "Regulatory Compliance",
+        "Security & Encryption",
+        "Trading Efficiency",
+        "Risk Management"
+      ],
+      "features": [
+        {
+          "title": "Trading Platforms",
+          "desc": "Advanced trading and investment platforms",
+          "iconName": "TrendingUp"
+        },
+        {
+          "title": "Compliance",
+          "desc": "Regulatory compliance management systems",
+          "iconName": "CheckCircle"
+        },
+        {
+          "title": "Risk Analysis",
+          "desc": "Real-time risk monitoring and analysis",
+          "iconName": "AlertTriangle"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "slug": "energy-utilities",
+      "title": "Energy & Utilities",
+      "description": "Digital solutions for energy and utility sectors",
+      "iconName": "Zap",
+      "fullDescription": "Optimize energy distribution and utility operations with our smart grid, IoT, and analytics solutions. We enable efficient resource management and sustainability.",
+      "benefits": [
+        "Smart Grid Technology",
+        "Energy Efficiency",
+        "Real-time Monitoring",
+        "Sustainability"
+      ],
+      "features": [
+        {
+          "title": "Smart Grid",
+          "desc": "Intelligent grid management systems",
+          "iconName": "Radio"
+        },
+        {
+          "title": "IoT Sensors",
+          "desc": "Connected sensor networks for monitoring",
+          "iconName": "Zap"
+        },
+        {
+          "title": "Predictive",
+          "desc": "Predictive maintenance and analytics",
+          "iconName": "TrendingUp"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "slug": "logistics-supply-chain",
+      "title": "Logistics & Supply Chain",
+      "description": "Supply chain optimization and logistics solutions",
+      "iconName": "Truck",
+      "fullDescription": "Optimize your entire supply chain with our logistics, tracking, and analytics solutions. From warehouse management to last-mile delivery, we provide visibility and efficiency.",
+      "benefits": [
+        "Route Optimization",
+        "Real-time Tracking",
+        "Warehouse Automation",
+        "Cost Reduction"
+      ],
+      "features": [
+        {
+          "title": "Tracking",
+          "desc": "Real-time shipment tracking and visibility",
+          "iconName": "Radio"
+        },
+        {
+          "title": "Optimization",
+          "desc": "Route and delivery optimization",
+          "iconName": "Navigation"
+        },
+        {
+          "title": "Warehouse",
+          "desc": "Warehouse management systems",
+          "iconName": "Package"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "slug": "oil-gas",
+      "title": "Oil & Gas",
+      "description": "Solutions for upstream, midstream, and downstream operations",
+      "iconName": "Droplet",
+      "fullDescription": "Specialized solutions for the oil and gas industry including exploration, production, distribution, and safety. We provide advanced analytics, automation, and compliance management.",
+      "benefits": [
+        "Production Optimization",
+        "Safety & Compliance",
+        "Resource Management",
+        "Environmental Monitoring"
+      ],
+      "features": [
+        {
+          "title": "Production",
+          "desc": "Reservoir and production optimization",
+          "iconName": "TrendingUp"
+        },
+        {
+          "title": "Safety",
+          "desc": "Safety systems and incident prevention",
+          "iconName": "AlertTriangle"
+        },
+        {
+          "title": "Pipeline",
+          "desc": "Pipeline monitoring and management",
+          "iconName": "GitBranch"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "slug": "infrastructure-construction",
+      "title": "Infrastructure & Construction",
+      "description": "Digital solutions for construction and infrastructure projects",
+      "iconName": "HardHat",
+      "fullDescription": "Streamline construction and infrastructure projects with our project management, BIM, and collaboration solutions. From planning to completion, we enhance efficiency and safety.",
+      "benefits": [
+        "Project Management",
+        "Cost Control",
+        "Safety Management",
+        "Quality Assurance"
+      ],
+      "features": [
+        {
+          "title": "BIM",
+          "desc": "Building Information Modeling systems",
+          "iconName": "Building2"
+        },
+        {
+          "title": "Collaboration",
+          "desc": "Team collaboration and communication tools",
+          "iconName": "Users"
+        },
+        {
+          "title": "Compliance",
+          "desc": "Safety and compliance management",
+          "iconName": "CheckCircle"
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "adminUsers": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "email": "admin@omnitratech.com",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "footerLinks": [
+    {
+      "id": "1",
+      "column": "Quick Links",
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "id": "2",
+      "column": "Quick Links",
+      "label": "About Us",
+      "url": "/#about"
+    },
+    {
+      "id": "3",
+      "column": "Quick Links",
+      "label": "Industries",
+      "url": "/#industries"
+    },
+    {
+      "id": "4",
+      "column": "Quick Links",
+      "label": "Careers",
+      "url": "/careers"
+    },
+    {
+      "id": "5",
+      "column": "Quick Links",
+      "label": "Contact",
+      "url": "/#contact"
+    },
+    {
+      "id": "6",
+      "column": "Services",
+      "label": "AI & ML Services",
+      "url": "/solutions/ai-ml-services"
+    },
+    {
+      "id": "7",
+      "column": "Services",
+      "label": "Cloud & Digital Operations",
+      "url": "/solutions/cloud-cognitive"
+    },
+    {
+      "id": "8",
+      "column": "Services",
+      "label": "Mechanical & Industrial",
+      "url": "/solutions/mechanical-industrial"
+    },
+    {
+      "id": "9",
+      "column": "Services",
+      "label": "Pipeline Design & Installation",
+      "url": "/solutions/pipeline-design"
+    },
+    {
+      "id": "10",
+      "column": "Services",
+      "label": "Enterprise Solutions",
+      "url": "/solutions/enterprise-solutions"
+    },
+    {
+      "id": "11",
+      "column": "Services",
+      "label": "Cybersecurity Solutions",
+      "url": "/solutions/cybersecurity-solutions"
+    },
+    {
+      "id": "12",
+      "column": "Resources",
+      "label": "Blog",
+      "url": "/#resources"
+    },
+    {
+      "id": "13",
+      "column": "Resources",
+      "label": "Case Studies",
+      "url": "/#resources"
+    },
+    {
+      "id": "14",
+      "column": "Resources",
+      "label": "Whitepapers",
+      "url": "/#resources"
+    },
+    {
+      "id": "15",
+      "column": "Resources",
+      "label": "Tutorials",
+      "url": "/#resources"
+    }
+  ],
+  "formEntries": [
+    {
+      "id": "1775812976665",
+      "email": "john@example.com",
+      "message": "Test message",
+      "name": "John Doe",
+      "company": "Test Corp",
+      "type": "General Enquiry",
+      "createdAt": "2026-04-10T09:22:56.665Z"
+    }
+  ],
+  "settings": {
+    "heroBadge": "Leading Technology & Engineering Solutions Across Industries",
+    "heroTitle": "Engineering the Future with Intelligence",
+    "heroDescription": "OmnitraTech is a global leader delivering integrated technology and engineering solutions across diverse sectors. From advanced AI/ML implementations and robust cloud digital operations to specialized mechanical engineering, pipeline design, and gas industry services, we empower organizations with innovation-driven excellence and professional precision.",
+    "aboutTitle": "Architects of the Digital & Physical World",
+    "aboutDescription": "At OmnitraTech, we combine deep technical expertise with business acumen to solve complex challenges.",
+    "servicesTitle": "Expert Solutions for Every Need",
+    "servicesDescription": "We deliver advanced technology and engineering capabilities to solve complex challenges.",
+    "serviceOverviewTitle": "Service Overview",
+    "serviceCapabilitiesTitle": "Key Capabilities",
+    "industryTransformTitle": "How We Transform This Industry",
+    "industryCapabilitiesTitle": "Industry-Specific Capabilities",
+    "resourcesTitle": "Insights & Resources",
+    "resourcesDescription": "Stay ahead of the curve with our latest research, case studies, and technical deep-dives.",
+    "careersTitle": "Join Our Team of Innovators",
+    "careersDescription": "Help us solve complex challenges globally.",
+    "contactEmail": "contact@omnitratech.com",
+    "contactPhone": "+91 9112379666",
+    "contactAddress": "First Floor, Guruprasad Bulding, Opp. Adarsha Green City, Amravati, MH, India 444 605",
+    "footerDescription": "OmnitraTech delivers advanced technology and engineering solutions across AI/ML, Cloud Infrastructure, Mechanical Systems, Pipeline Engineering, and Gas Industry services.",
+    "socialLinkedin": "#",
+    "socialTwitter": "#",
+    "socialFacebook": "#",
+    "socialInstagram": "#"
+  }
+}

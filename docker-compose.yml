@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # Frontend - React + Vite
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+    container_name: omnitratech-frontend
+    ports:
+      - "5175:5175"
+    environment:
+      VITE_API_URL: http://backend:3001/api
+    depends_on:
+      - backend
+    networks:
+      - omnitratech-network
+    restart: unless-stopped
+
+  # Backend - Express.js API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: omnitratech-backend
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      NODE_ENV: production
+      CORS_ORIGIN: http://localhost:5175
+      ADMIN_USER: admin
+      ADMIN_PASSWORD: admin123
+      DB_TYPE: json
+    volumes:
+      - ./backend/data:/app/data
+    networks:
+      - omnitratech-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  backend_data:
+
+networks:
+  omnitratech-network:
+    driver: bridge
