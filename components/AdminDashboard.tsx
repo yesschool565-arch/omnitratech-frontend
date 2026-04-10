@@ -113,8 +113,13 @@ const AdminDashboard: React.FC = () => {
   }, [settings]);
 
   const saveSettings = () => {
-    updateSettings(localSettings);
-    alert('Settings saved!');
+    try {
+      updateSettings(localSettings);
+      alert('Settings saved successfully!');
+    } catch (error) {
+      console.error('Error saving settings:', error);
+      alert('Failed to save settings. Please try again.');
+    }
   };
 
   const handleSettingsChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -131,21 +136,28 @@ const AdminDashboard: React.FC = () => {
   };
   const handleAddNewService = (e: React.FormEvent) => {
     e.preventDefault();
-    const finalService = {
-        ...newService,
-        slug: newService.title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, ''),
-        benefits: newService.benefits.filter(b => b.trim() !== ''),
-        features: newService.features.filter(f => f.title.trim() !== '')
-    };
-    if (editingServiceId) {
-        CMSServices.update(editingServiceId, finalService);
-    } else {
-        CMSServices.add(finalService);
+    try {
+      const finalService = {
+          ...newService,
+          slug: newService.title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, ''),
+          benefits: newService.benefits.filter(b => b.trim() !== ''),
+          features: newService.features.filter(f => f.title.trim() !== '')
+      };
+      if (editingServiceId) {
+          CMSServices.update(editingServiceId, finalService);
+          alert('Service updated successfully!');
+      } else {
+          CMSServices.add(finalService);
+          alert('Service added successfully!');
+      }
+      setServices(CMSServices.getAll());
+      setShowAddService(false);
+      setNewService(initServiceState);
+      setEditingServiceId(null);
+    } catch (error) {
+      console.error('Error saving service:', error);
+      alert('Failed to save service. Please try again.');
     }
-    setServices(CMSServices.getAll());
-    setShowAddService(false);
-    setNewService(initServiceState);
-    setEditingServiceId(null);
   };
 
   const handleEditResource = (item: ResourceModel) => {
@@ -156,15 +168,22 @@ const AdminDashboard: React.FC = () => {
   }
   const handleAddNewResource = (e: React.FormEvent) => {
     e.preventDefault();
-    if (editingResourceId) {
-        CMSResources.update(editingResourceId, newResource);
-    } else {
-        CMSResources.add(newResource);
+    try {
+      if (editingResourceId) {
+          CMSResources.update(editingResourceId, newResource);
+          alert('Resource updated successfully!');
+      } else {
+          CMSResources.add(newResource);
+          alert('Resource added successfully!');
+      }
+      setResources(CMSResources.getAll());
+      setShowAddResource(false);
+      setNewResource(initResourceState);
+      setEditingResourceId(null);
+    } catch (error) {
+      console.error('Error saving resource:', error);
+      alert('Failed to save resource. Please try again.');
     }
-    setResources(CMSResources.getAll());
-    setShowAddResource(false);
-    setNewResource(initResourceState);
-    setEditingResourceId(null);
   };
 
   const handleEditJob = (item: JobModel) => {
@@ -175,16 +194,23 @@ const AdminDashboard: React.FC = () => {
   }
   const handleAddNewJob = (e: React.FormEvent) => {
     e.preventDefault();
-    const payload = { ...newJob, tags: newJob.tags.split(',').map(s=>s.trim()).filter(Boolean) };
-    if (editingJobId) {
-        CMSJobs.update(editingJobId, payload);
-    } else {
-        CMSJobs.add(payload);
+    try {
+      const payload = { ...newJob, tags: newJob.tags.split(',').map(s=>s.trim()).filter(Boolean) };
+      if (editingJobId) {
+          CMSJobs.update(editingJobId, payload);
+          alert('Job updated successfully!');
+      } else {
+          CMSJobs.add(payload);
+          alert('Job posted successfully!');
+      }
+      setJobs(CMSJobs.getAll());
+      setShowAddJob(false);
+      setNewJob(initJobState);
+      setEditingJobId(null);
+    } catch (error) {
+      console.error('Error saving job:', error);
+      alert('Failed to save job. Please try again.');
     }
-    setJobs(CMSJobs.getAll());
-    setShowAddJob(false);
-    setNewJob(initJobState);
-    setEditingJobId(null);
   };
 
   const handleEditIndustry = (industry: IndustryModel) => {
@@ -198,21 +224,28 @@ const AdminDashboard: React.FC = () => {
   };
   const handleAddNewIndustry = (e: React.FormEvent) => {
     e.preventDefault();
-    const finalIndustry = {
-        ...newIndustry,
-        slug: newIndustry.title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, ''),
-        benefits: newIndustry.benefits.filter(b => b.trim() !== ''),
-        features: newIndustry.features.filter(f => f.title.trim() !== '')
-    };
-    if (editingIndustryId) {
-        CMSIndustries.update(editingIndustryId, finalIndustry);
-    } else {
-        CMSIndustries.add(finalIndustry);
+    try {
+      const finalIndustry = {
+          ...newIndustry,
+          slug: newIndustry.title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, ''),
+          benefits: newIndustry.benefits.filter(b => b.trim() !== ''),
+          features: newIndustry.features.filter(f => f.title.trim() !== '')
+      };
+      if (editingIndustryId) {
+          CMSIndustries.update(editingIndustryId, finalIndustry);
+          alert('Industry updated successfully!');
+      } else {
+          CMSIndustries.add(finalIndustry);
+          alert('Industry added successfully!');
+      }
+      setIndustries(CMSIndustries.getAll());
+      setShowAddIndustry(false);
+      setEditingIndustryId(null);
+      setNewIndustry(initIndustryState);
+    } catch (error) {
+      console.error('Error saving industry:', error);
+      alert('Failed to save industry. Please try again.');
     }
-    setIndustries(CMSIndustries.getAll());
-    setShowAddIndustry(false);
-    setEditingIndustryId(null);
-    setNewIndustry(initIndustryState);
   };
 
   const handleEditFooterLink = (link: FooterLinkModel) => {
@@ -223,15 +256,22 @@ const AdminDashboard: React.FC = () => {
   };
   const handleAddNewFooterLink = (e: React.FormEvent) => {
     e.preventDefault();
-    if (editingFooterLinkId) {
-        CMSFooterLinks.update(editingFooterLinkId, newFooterLink);
-    } else {
-        CMSFooterLinks.add(newFooterLink);
+    try {
+      if (editingFooterLinkId) {
+          CMSFooterLinks.update(editingFooterLinkId, newFooterLink);
+          alert('Link updated successfully!');
+      } else {
+          CMSFooterLinks.add(newFooterLink);
+          alert('Link added successfully!');
+      }
+      setFooterLinks(CMSFooterLinks.getAll());
+      setShowAddFooterLink(false);
+      setEditingFooterLinkId(null);
+      setNewFooterLink(initFooterLinkState);
+    } catch (error) {
+      console.error('Error saving footer link:', error);
+      alert('Failed to save link. Please try again.');
     }
-    setFooterLinks(CMSFooterLinks.getAll());
-    setShowAddFooterLink(false);
-    setEditingFooterLinkId(null);
-    setNewFooterLink(initFooterLinkState);
   };
 
   const autoGenerateUrl = (label: string, column: string) => {
