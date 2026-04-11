@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,11 +38,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-3 group">
-              <img
-                src="/Logo.jpeg"
-                alt="OmnitraTech Logo"
-                className="h-14 w-auto object-contain"
-              />
+              <Logo className="h-14 w-auto object-contain" />
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-slate-900 leading-none tracking-tight group-hover:text-brand-600 transition-colors">
                   OMNITRA

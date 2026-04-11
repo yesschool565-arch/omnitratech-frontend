@@ -3,6 +3,7 @@ import { Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSettings } from '../utils/settings';
 import { CMSFooterLinks, FooterLinkModel } from '../utils/cms';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const { settings } = useSettings();
@@ -24,11 +25,7 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="mb-6">
-              <img
-                src="/Logo.jpeg"
-                alt="OmnitraTech Logo"
-                className="h-16 w-auto object-contain"
-              />
+              <Logo className="h-16 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed text-slate-400 text-justify">
               {settings.footerDescription}
