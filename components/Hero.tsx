@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSettings } from '../utils/settings';
+import { CONFIG } from '../utils/config';
 
 const Hero: React.FC = () => {
   const { settings } = useSettings();
@@ -50,7 +51,13 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Abstract Grid Graphic */}
-      <div className="absolute inset-0 bg-[url('http://localhost:3000/api/assets/noise.svg')] opacity-20 pointer-events-none"></div>
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: `url('${CONFIG.NOISE_SVG_URL}')`,
+          backgroundSize: '100px 100px'
+        }}
+      ></div>
     </section>
   );
 };

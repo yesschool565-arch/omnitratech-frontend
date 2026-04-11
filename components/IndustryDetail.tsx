@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CMSIndustries, IndustryModel } from '../utils/cms';
 import { useSettings } from '../utils/settings';
+import { CONFIG } from '../utils/config';
 import {
     ArrowLeft, CheckCircle2, Factory, HeartPulse, ShoppingBag,
     Landmark, Zap, Truck, Droplets, HardHat, BarChart3,
@@ -130,7 +131,13 @@ const IndustryDetail: React.FC = () => {
 
             {/* CTA Section */}
             <section className="py-24 bg-brand-600 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('http://localhost:3000/api/assets/noise.svg')] opacity-10 mix-blend-overlay"></div>
+                <div 
+                  className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-10"
+                  style={{
+                    backgroundImage: `url('${CONFIG.NOISE_SVG_URL}')`,
+                    backgroundSize: '100px 100px'
+                  }}
+                ></div>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
                     <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">Ready to Innovate in {data.title}?</h2>
                     <p className="text-xl text-brand-100 mb-12 leading-relaxed">

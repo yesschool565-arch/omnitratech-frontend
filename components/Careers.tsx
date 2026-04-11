@@ -15,6 +15,7 @@ import {
 import OpportunityCard from './OpportunityCard';
 import { CMSJobs, JobModel } from '../utils/cms';
 import { useSettings } from '../utils/settings';
+import { CONFIG } from '../utils/config';
 
 const Careers: React.FC = () => {
     const [searchQuery, setSearchQuery] = React.useState('');
@@ -52,7 +53,13 @@ const Careers: React.FC = () => {
                 {/* Background Decorative Elements */}
                 <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-brand-600/10 rounded-full blur-[120px]"></div>
                 <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-brand-500/5 rounded-full blur-[100px]"></div>
-                <div className="absolute inset-0 bg-[url('http://localhost:3000/api/assets/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+                <div 
+                  className="absolute inset-0 mix-blend-overlay pointer-events-none opacity-20"
+                  style={{
+                    backgroundImage: `url('${CONFIG.NOISE_SVG_URL}')`,
+                    backgroundSize: '100px 100px'
+                  }}
+                ></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <div className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-brand-400 uppercase bg-brand-400/10 rounded-full border border-brand-400/20">
