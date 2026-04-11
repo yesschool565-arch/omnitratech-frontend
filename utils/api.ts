@@ -52,7 +52,7 @@ export const api = {
 // Auth helpers
 // ============================================================
 export async function login(username: string, password: string): Promise<string> {
-  const res = await api.post<{ token: string }>('/admin/login', { username, password });
+  const res = await api.post<{ token: string }>('/auth/login', { username, password });
   setToken(res.token);
   return res.token;
 }

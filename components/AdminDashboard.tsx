@@ -112,9 +112,13 @@ const AdminDashboard: React.FC = () => {
     setLocalSettings(settings);
   }, [settings]);
 
-  const saveSettings = () => {
-    updateSettings(localSettings);
-    alert('Settings saved!');
+  const saveSettings = async () => {
+    try {
+      await updateSettings(localSettings);
+      alert('Settings saved successfully!');
+    } catch (err: any) {
+      alert(`Error saving settings: ${err.message}`);
+    }
   };
 
   const handleSettingsChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -129,7 +133,7 @@ const AdminDashboard: React.FC = () => {
       setShowAddService(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const handleAddNewService = (e: React.FormEvent) => {
+  const handleAddNewService = async (e: React.FormEvent) => {
     e.preventDefault();
     const finalService = {
         ...newService,
@@ -137,15 +141,20 @@ const AdminDashboard: React.FC = () => {
         benefits: newService.benefits.filter(b => b.trim() !== ''),
         features: newService.features.filter(f => f.title.trim() !== '')
     };
-    if (editingServiceId) {
-        CMSServices.update(editingServiceId, finalService);
-    } else {
-        CMSServices.add(finalService);
+    try {
+      if (editingServiceId) {
+          await CMSServices.update(editingServiceId, finalService);
+      } else {
+          await CMSServices.add(finalService);
+      }
+      const updated = await CMSServices.getAll();
+      setServices(updated);
+      setShowAddService(false);
+      setNewService(initServiceState);
+      setEditingServiceId(null);
+    } catch (err: any) {
+      alert(`Error saving service: ${err.message}`);
     }
-    setServices(CMSServices.getAll());
-    setShowAddService(false);
-    setNewService(initServiceState);
-    setEditingServiceId(null);
   };
 
   const handleEditResource = (item: ResourceModel) => {
@@ -154,17 +163,22 @@ const AdminDashboard: React.FC = () => {
       setShowAddResource(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  const handleAddNewResource = (e: React.FormEvent) => {
+  const handleAddNewResource = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (editingResourceId) {
-        CMSResources.update(editingResourceId, newResource);
-    } else {
-        CMSResources.add(newResource);
+    try {
+      if (editingResourceId) {
+          await CMSResources.update(editingResourceId, newResource);
+      } else {
+          await CMSResources.add(newResource);
+      }
+      const updated = await CMSResources.getAll();
+      setResources(updated);
+      setShowAddResource(false);
+      setNewResource(initResourceState);
+      setEditingResourceId(null);
+    } catch (err: any) {
+      alert(`Error saving resource: ${err.message}`);
     }
-    setResources(CMSResources.getAll());
-    setShowAddResource(false);
-    setNewResource(initResourceState);
-    setEditingResourceId(null);
   };
 
   const handleEditJob = (item: JobModel) => {
@@ -173,18 +187,23 @@ const AdminDashboard: React.FC = () => {
       setShowAddJob(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  const handleAddNewJob = (e: React.FormEvent) => {
+  const handleAddNewJob = async (e: React.FormEvent) => {
     e.preventDefault();
     const payload = { ...newJob, tags: newJob.tags.split(',').map(s=>s.trim()).filter(Boolean) };
-    if (editingJobId) {
-        CMSJobs.update(editingJobId, payload);
-    } else {
-        CMSJobs.add(payload);
+    try {
+      if (editingJobId) {
+          await CMSJobs.update(editingJobId, payload);
+      } else {
+          await CMSJobs.add(payload);
+      }
+      const updated = await CMSJobs.getAll();
+      setJobs(updated);
+      setShowAddJob(false);
+      setNewJob(initJobState);
+      setEditingJobId(null);
+    } catch (err: any) {
+      alert(`Error saving job: ${err.message}`);
     }
-    setJobs(CMSJobs.getAll());
-    setShowAddJob(false);
-    setNewJob(initJobState);
-    setEditingJobId(null);
   };
 
   const handleEditIndustry = (industry: IndustryModel) => {
@@ -196,7 +215,7 @@ const AdminDashboard: React.FC = () => {
     setShowAddIndustry(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const handleAddNewIndustry = (e: React.FormEvent) => {
+  const handleAddNewIndustry = async (e: React.FormEvent) => {
     e.preventDefault();
     const finalIndustry = {
         ...newIndustry,
@@ -204,15 +223,20 @@ const AdminDashboard: React.FC = () => {
         benefits: newIndustry.benefits.filter(b => b.trim() !== ''),
         features: newIndustry.features.filter(f => f.title.trim() !== '')
     };
-    if (editingIndustryId) {
-        CMSIndustries.update(editingIndustryId, finalIndustry);
-    } else {
-        CMSIndustries.add(finalIndustry);
+    try {
+      if (editingIndustryId) {
+          await CMSIndustries.update(editingIndustryId, finalIndustry);
+      } else {
+          await CMSIndustries.add(finalIndustry);
+      }
+      const updated = await CMSIndustries.getAll();
+      setIndustries(updated);
+      setShowAddIndustry(false);
+      setEditingIndustryId(null);
+      setNewIndustry(initIndustryState);
+    } catch (err: any) {
+      alert(`Error saving industry: ${err.message}`);
     }
-    setIndustries(CMSIndustries.getAll());
-    setShowAddIndustry(false);
-    setEditingIndustryId(null);
-    setNewIndustry(initIndustryState);
   };
 
   const handleEditFooterLink = (link: FooterLinkModel) => {
@@ -221,17 +245,22 @@ const AdminDashboard: React.FC = () => {
     setShowAddFooterLink(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const handleAddNewFooterLink = (e: React.FormEvent) => {
+  const handleAddNewFooterLink = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (editingFooterLinkId) {
-        CMSFooterLinks.update(editingFooterLinkId, newFooterLink);
-    } else {
-        CMSFooterLinks.add(newFooterLink);
+    try {
+      if (editingFooterLinkId) {
+          await CMSFooterLinks.update(editingFooterLinkId, newFooterLink);
+      } else {
+          await CMSFooterLinks.add(newFooterLink);
+      }
+      const updated = await CMSFooterLinks.getAll();
+      setFooterLinks(updated);
+      setShowAddFooterLink(false);
+      setEditingFooterLinkId(null);
+      setNewFooterLink(initFooterLinkState);
+    } catch (err: any) {
+      alert(`Error saving footer link: ${err.message}`);
     }
-    setFooterLinks(CMSFooterLinks.getAll());
-    setShowAddFooterLink(false);
-    setEditingFooterLinkId(null);
-    setNewFooterLink(initFooterLinkState);
   };
 
   const autoGenerateUrl = (label: string, column: string) => {
@@ -430,7 +459,7 @@ const AdminDashboard: React.FC = () => {
             </div>
             <div className="flex gap-2">
                 <button onClick={() => handleEditService(item)} className="p-2 text-brand-600 hover:bg-brand-50 rounded-lg"><Edit3 size={18}/></button>
-                <button onClick={() => { if(confirm('Delete?')) { CMSServices.remove(item.id); setServices(CMSServices.getAll()); } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
+                <button onClick={async () => { if(confirm('Delete?')) { try { await CMSServices.remove(item.id); const updated = await CMSServices.getAll(); setServices(updated); } catch(err: any) { alert(`Error deleting service: ${err.message}`); } } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
             </div>
           </li>
         ))}
@@ -485,7 +514,7 @@ const AdminDashboard: React.FC = () => {
             </div>
             <div className="flex gap-2">
                 <button onClick={() => handleEditResource(item)} className="p-2 text-brand-600 hover:bg-brand-50 rounded-lg"><Edit3 size={18}/></button>
-                <button onClick={() => { if(confirm('Delete?')) { CMSResources.remove(item.id); setResources(CMSResources.getAll()); } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
+                <button onClick={async () => { if(confirm('Delete?')) { try { await CMSResources.remove(item.id); const updated = await CMSResources.getAll(); setResources(updated); } catch(err: any) { alert(`Error deleting resource: ${err.message}`); } } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
             </div>
           </li>
         ))}
@@ -544,7 +573,7 @@ const AdminDashboard: React.FC = () => {
             </div>
             <div className="flex gap-2">
                 <button onClick={() => handleEditJob(item)} className="p-2 text-brand-600 hover:bg-brand-50 rounded-lg"><Edit3 size={18}/></button>
-                <button onClick={() => { if(confirm('Delete?')) { CMSJobs.remove(item.id); setJobs(CMSJobs.getAll()); } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
+                <button onClick={async () => { if(confirm('Delete?')) { try { await CMSJobs.remove(item.id); const updated = await CMSJobs.getAll(); setJobs(updated); } catch(err: any) { alert(`Error deleting job: ${err.message}`); } } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
             </div>
           </li>
         ))}
@@ -646,7 +675,7 @@ const AdminDashboard: React.FC = () => {
             </div>
             <div className="flex gap-2">
                 <button onClick={() => handleEditIndustry(item)} className="p-2 text-brand-600 hover:bg-brand-50 rounded-lg"><Edit3 size={18}/></button>
-                <button onClick={() => { if(confirm('Are you sure you want to delete this industry?')) { CMSIndustries.remove(item.id); setIndustries(CMSIndustries.getAll()); } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
+                <button onClick={async () => { if(confirm('Are you sure you want to delete this industry?')) { try { await CMSIndustries.remove(item.id); const updated = await CMSIndustries.getAll(); setIndustries(updated); } catch(err: any) { alert(`Error deleting industry: ${err.message}`); } } }} className="p-2 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={18}/></button>
             </div>
           </li>
         ))}
@@ -714,7 +743,7 @@ const AdminDashboard: React.FC = () => {
                 </div>
                 <div className="flex gap-1">
                     <button onClick={() => handleEditFooterLink(item)} className="p-1.5 text-brand-600 hover:bg-brand-50 rounded-lg"><Edit3 size={14}/></button>
-                    <button onClick={() => { if(confirm('Remove this link?')) { CMSFooterLinks.remove(item.id); setFooterLinks(CMSFooterLinks.getAll()); } }} className="p-1.5 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={14}/></button>
+                    <button onClick={async () => { if(confirm('Remove this link?')) { try { await CMSFooterLinks.remove(item.id); const updated = await CMSFooterLinks.getAll(); setFooterLinks(updated); } catch(err: any) { alert(`Error deleting footer link: ${err.message}`); } } }} className="p-1.5 text-red-500 hover:bg-red-50 rounded-lg"><Trash2 size={14}/></button>
                 </div>
             </li>
             ))}
