@@ -130,7 +130,7 @@ const IndustryDetail: React.FC = () => {
 
             {/* CTA Section */}
             <section className="py-24 bg-brand-600 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-[url('http://localhost:3000/api/assets/noise.svg')] opacity-10 mix-blend-overlay"></div>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
                     <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">Ready to Innovate in {data.title}?</h2>
                     <p className="text-xl text-brand-100 mb-12 leading-relaxed">
