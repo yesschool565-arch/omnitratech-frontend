@@ -131,10 +131,27 @@ const AdminDashboard: React.FC = () => {
 
   // --- SUBMITS ---
   const handleEditService = (item: ServiceModel) => {
-      setNewService({ title: item.title, slug: item.slug, description: item.description, fullDescription: item.fullDescription, iconName: item.iconName, benefits: item.benefits, features: item.features });
+    try {
+      // Ensure features and benefits are arrays
+      const features = Array.isArray(item.features) ? item.features : [];
+      const benefits = Array.isArray(item.benefits) ? item.benefits : [];
+      
+      setNewService({ 
+        title: item.title, 
+        slug: item.slug, 
+        description: item.description, 
+        fullDescription: item.fullDescription, 
+        iconName: item.iconName, 
+        benefits: benefits,
+        features: features
+      });
       setEditingServiceId(item.id);
       setShowAddService(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Error loading service for edit:', error);
+      alert('Failed to load service. Please try again.');
+    }
   };
   const handleAddNewService = async (e: React.FormEvent) => {
     e.preventDefault();
