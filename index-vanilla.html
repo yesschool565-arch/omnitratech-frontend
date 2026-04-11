@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmnitraTech - Engineering the Future with Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23f0f9ff' stroke='%230284c7' stroke-width='2'/></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="navbar-logo">
+                    <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" fill="#f0f9ff"/>
+                        <circle cx="32" cy="32" r="30" stroke="#0284c7" stroke-width="2"/>
+                        <rect x="14" y="14" width="10" height="10" fill="#0284c7" rx="2"/>
+                        <circle cx="50" cy="20" r="5" fill="#0ea5e9"/>
+                        <circle cx="32" cy="32" r="12" fill="none" stroke="#075985" stroke-width="2.5"/>
+                        <circle cx="32" cy="32" r="4" fill="#0284c7"/>
+                        <line x1="16" y1="48" x2="28" y2="48" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round"/>
+                        <rect x="44" y="46" width="8" height="8" fill="#0284c7" rx="1.5"/>
+                        <circle cx="32" cy="16" r="2.5" fill="#0ea5e9"/>
+                    </svg>
+                    <div class="logo-text">
+                        <h1>OMNITRA</h1>
+                        <p>Tech Services</p>
+                    </div>
+                </div>
+                <div class="navbar-menu" id="navbarMenu">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#industries">Industries</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="navbar-toggle" id="navbarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Leading Technology & Engineering Solutions Across Industries</div>
+                <h2>Engineering the Future with Intelligence</h2>
+                <p>OmnitraTech is a global leader delivering integrated technology and engineering solutions across diverse sectors. From advanced AI/ML implementations and robust cloud digital operations to specialized mechanical engineering, pipeline design, and gas industry services, we empower organizations with innovation-driven excellence and professional precision.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/800/600?grayscale" alt="OmnitraTech Team Meeting">
+                </div>
+                <div class="about-text">
+                    <h2>Architects of the Digital & Physical World</h2>
+                    <p>At OmnitraTech, we believe that technology and engineering are not just tools—they are catalysts for transformation. Our team of seasoned professionals brings decades of combined experience in AI, cloud infrastructure, mechanical systems, pipeline engineering, and industry-specific solutions.</p>
+                    <p>We don't just deliver services; we deliver partnerships that drive your business forward. Our commitment to excellence, innovation, and client success is unwavering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Expert Solutions for Every Need</h2>
+            <p class="section-subtitle">We deliver advanced technology and engineering capabilities to solve complex challenges.</p>
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="industries">
+        <div class="container">
+            <h2>Transforming Industries with Innovative Solutions</h2>
+            <div class="industries-grid" id="industriesGrid">
+                <!-- Industries will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Insights & Resources</h2>
+            <p class="section-subtitle">Stay ahead of the curve with our latest research, case studies, and technical deep-dives.</p>
+            <div class="resources-grid" id="resourcesGrid">
+                <!-- Resources will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="careers">
+        <div class="container">
+            <div class="careers-header">
+                <div class="careers-badge">Join Our Team</div>
+                <h2>Join Our Team of Innovators</h2>
+                <p>Help us solve complex challenges globally.</p>
+            </div>
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Jobs will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <a href="mailto:contact@omnitratech.com">contact@omnitratech.com</a>
+                    </div>
+                    <div class="info-item">
+                        <h3>Phone</h3>
+                        <a href="tel:+919112379666">+91 9112379666</a>
+                    </div>
+                    <div class="info-item">
+                        <h3>Address</h3>
+                        <p>First Floor, Guruprasad Bulding, Opp. Adarsha Green City, Amravati, MH, India 444 605</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#f0f9ff"/>
+                            <circle cx="32" cy="32" r="30" stroke="#0284c7" stroke-width="2"/>
+                            <rect x="14" y="14" width="10" height="10" fill="#0284c7" rx="2"/>
+                        </svg>
+                    </div>
+                    <p>OmnitraTech delivers advanced technology and engineering solutions across AI/ML, Cloud Infrastructure, Mechanical Systems, Pipeline Engineering, and Gas Industry services.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">AI & ML Services</a></li>
+                        <li><a href="#services">Cloud Operations</a></li>
+                        <li><a href="#services">Mechanical Solutions</a></li>
+                        <li><a href="#services">Pipeline Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#resources">Blog</a></li>
+                        <li><a href="#resources">Case Studies</a></li>
+                        <li><a href="#resources">Whitepapers</a></li>
+                        <li><a href="#resources">Tutorials</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OmnitraTech. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
