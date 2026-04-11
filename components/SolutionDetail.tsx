@@ -5,8 +5,9 @@ import { useSettings } from '../utils/settings';
 import {
     Cloud, Briefcase, Shield, Building2, Wifi, BrainCircuit,
     ArrowLeft, CheckCircle2, Zap, BarChart3, Users, Megaphone,
-    Factory, GitCommit, LayoutDashboard, Search, Box, Link as LinkIcon,
-    Activity, Cpu, Sparkles, Brain, Bot, HelpCircle
+    Factory, GitBranch, LayoutDashboard, Search, Box, Link as LinkIcon,
+    Activity, Cpu, Sparkles, Brain, Bot, HelpCircle, Settings, Wrench,
+    TrendingUp, Hammer, Code, Headphones, AlertTriangle, CheckCircle
 } from 'lucide-react';
 
 const mainIconMap: Record<string, React.ReactNode> = {
@@ -16,16 +17,21 @@ const mainIconMap: Record<string, React.ReactNode> = {
     Building2: <Building2 className="w-12 h-12" />,
     Wifi: <Wifi className="w-12 h-12" />,
     BrainCircuit: <BrainCircuit className="w-12 h-12" />,
+    Brain: <Brain className="w-12 h-12" />,
     Factory: <Factory className="w-12 h-12" />,
-    GitCommit: <GitCommit className="w-12 h-12" />,
-    Megaphone: <Megaphone className="w-12 h-12" />
+    GitBranch: <GitBranch className="w-12 h-12" />,
+    Megaphone: <Megaphone className="w-12 h-12" />,
+    Building2: <Building2 className="w-12 h-12" />,
+    AlertTriangle: <AlertTriangle className="w-12 h-12" />,
+    Code: <Code className="w-12 h-12" />,
 };
 
 const featureIconMap: Record<string, React.ReactNode> = {
     Zap: <Zap size={24} />,
     BarChart: <BarChart3 size={24} />,
+    BarChart3: <BarChart3 size={24} />,
     Users: <Users size={24} />,
-    MapComponent: <Search size={24} />, 
+    MapComponent: <Search size={24} />,
     Search: <Search size={24} />,
     Shield: <Shield size={24} />,
     Box: <Box size={24} />,
@@ -38,7 +44,16 @@ const featureIconMap: Record<string, React.ReactNode> = {
     Brain: <Brain size={24} />,
     Bot: <Bot size={24} />,
     Cloud: <Cloud size={24} />,
-    Settings: <HelpCircle size={24} />
+    Settings: <Settings size={24} />,
+    Wrench: <Wrench size={24} />,
+    TrendingUp: <TrendingUp size={24} />,
+    Hammer: <Hammer size={24} />,
+    Code: <Code size={24} />,
+    Headphones: <Headphones size={24} />,
+    AlertTriangle: <AlertTriangle size={24} />,
+    CheckCircle: <CheckCircle size={24} />,
+    GitBranch: <GitBranch size={24} />,
+    HelpCircle: <HelpCircle size={24} />
 };
 
 const SolutionDetail: React.FC = () => {

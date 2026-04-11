@@ -3,28 +3,56 @@ import { Link } from 'react-router-dom';
 import { CMSServices, CMSIndustries, IndustryModel } from '../utils/cms';
 import {
   Factory,
-  HeartPulse,
-  ShoppingBag,
-  Landmark,
+  Heart,
+  ShoppingCart,
+  DollarSign,
   Zap,
   Truck,
   Building2,
-  Droplets,
+  Droplet,
   HardHat,
-  Globe
+  Globe,
+  HeartPulse,
+  ShoppingBag,
+  Landmark,
+  Droplets,
+  Radio,
+  Video,
+  FileText,
+  Package,
+  CreditCard,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  Navigation,
+  Users
 } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   Factory: <Factory size={24} />,
+  Heart: <Heart size={24} />,
   HeartPulse: <HeartPulse size={24} />,
+  ShoppingCart: <ShoppingCart size={24} />,
   ShoppingBag: <ShoppingBag size={24} />,
   Landmark: <Landmark size={24} />,
+  DollarSign: <DollarSign size={24} />,
   Zap: <Zap size={24} />,
   Truck: <Truck size={24} />,
   Building2: <Building2 size={24} />,
+  Droplet: <Droplet size={24} />,
   Droplets: <Droplets size={24} />,
   HardHat: <HardHat size={24} />,
-  Globe: <Globe size={24} />
+  Globe: <Globe size={24} />,
+  Radio: <Radio size={24} />,
+  Video: <Video size={24} />,
+  FileText: <FileText size={24} />,
+  Package: <Package size={24} />,
+  CreditCard: <CreditCard size={24} />,
+  TrendingUp: <TrendingUp size={24} />,
+  CheckCircle: <CheckCircle size={24} />,
+  AlertTriangle: <AlertTriangle size={24} />,
+  Navigation: <Navigation size={24} />,
+  Users: <Users size={24} />
 };
 
 const Industries: React.FC = () => {

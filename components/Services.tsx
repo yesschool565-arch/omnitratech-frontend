@@ -12,7 +12,16 @@ import {
   Megaphone,
   Layers,
   Factory,
-  GitCommit
+  GitBranch,
+  Zap,
+  Settings,
+  Wrench,
+  TrendingUp,
+  Hammer,
+  CheckCircle,
+  AlertTriangle,
+  Code,
+  Headphones
 } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -26,7 +35,16 @@ const iconMap: Record<string, React.ReactNode> = {
   Layers: <Layers size={28} />,
   Factory: <Factory size={28} />,
   Brain: <BrainCircuit size={28} />,
-  GitCommit: <GitCommit size={28} />
+  GitBranch: <GitBranch size={28} />,
+  Zap: <Zap size={28} />,
+  Settings: <Settings size={28} />,
+  Wrench: <Wrench size={28} />,
+  TrendingUp: <TrendingUp size={28} />,
+  Hammer: <Hammer size={28} />,
+  CheckCircle: <CheckCircle size={28} />,
+  AlertTriangle: <AlertTriangle size={28} />,
+  Code: <Code size={28} />,
+  Headphones: <Headphones size={28} />
 };
 
 interface ServiceCardProps {
